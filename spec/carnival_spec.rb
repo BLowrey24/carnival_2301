@@ -47,4 +47,13 @@ RSpec.describe Carnival do
       expect(carnival1.most_popular_ride).to eq(ride1)
     end
   end
+
+  describe '#most_profitable_ride' do
+    it 'returns the most profitable ride' do
+      carnival1.add_ride(ride1)
+      carnival1.add_ride(ride2)
+
+      expect(carnival1.most_profitable_ride).to eq(ride2)
+    end
+  end
 end
