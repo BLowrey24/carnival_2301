@@ -41,10 +41,10 @@ RSpec.describe Carnival do
 
   describe '#most_popular_ride' do
     it 'returns the most popular ride' do
-      carnival.add_ride(ride1)
-      carnival.add_ride(ride2)
+      carnival1.add_ride(ride1)
+      carnival1.add_ride(ride2)
 
-      expect(carnival.most_popular_ride).to eq(ride1)
+      expect(carnival1.most_popular_ride).to eq(ride1)
     end
   end
 end
