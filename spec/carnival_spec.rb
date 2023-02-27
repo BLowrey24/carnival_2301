@@ -20,11 +20,11 @@ RSpec.describe Carnival do
     end
   end
   
-  def '#add_ride' do
+  describe '#add_ride' do
     it 'adds a ride to the rides array' do
-      add_ride(ride1)
-      add_ride(ride2)
-      add_ride(ride3)
+      carnival1.add_ride(ride1)
+      carnival1.add_ride(ride2)
+      carnival1.add_ride(ride3)
       
       
       expect(carnival1.rides).to eq([ride1, ride2, ride3])
