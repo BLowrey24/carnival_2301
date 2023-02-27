@@ -7,7 +7,6 @@ RSpec.describe Carnival do
   let(:carnival1) { Carnival.new(5) }
   let(:ride1) { Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle }) }
   let(:ride2) { Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle }) }
-  let(:ride3) { Ride.new({ name: 'Roller Coaster', min_height: 54, admission_fee: 2, excitement: :thrilling }) }
   let(:visitor1) { Visitor.new('Bruce', 54, '$10') }
   let(:visitor2) { Visitor.new('Tucker', 36, '$5') }
 
@@ -55,5 +54,13 @@ RSpec.describe Carnival do
 
       expect(carnival1.most_profitable_ride).to eq(ride1)
     end
+  end
+
+  describe '#total_revenue' do
+    it 'returns the total revenue of all the rides in the carvinal'
+    carnival1.add_ride(ride1)
+    carnival1.add_ride(ride2)
+
+    expect(carnival1.total_revenue).to eq(7)
   end
 end
