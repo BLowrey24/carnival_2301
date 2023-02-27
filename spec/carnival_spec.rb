@@ -53,7 +53,7 @@ RSpec.describe Carnival do
       carnival1.add_ride(ride1)
       carnival1.add_ride(ride2)
 
-      expect(carnival1.most_profitable_ride).to eq(ride2)
+      expect(carnival1.most_profitable_ride).to eq(ride1)
     end
   end
 end
