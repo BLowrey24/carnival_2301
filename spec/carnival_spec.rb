@@ -6,7 +6,7 @@ RSpec.describe Carnival do
 
   let(:carnival1) { Carnival.new(5) }
 
-  descriibe '#initialize' do
+  describe '#initialize' do
     it 'exists' do
       expect(carnival1).to be_a(Carnival)
     end
